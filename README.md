@@ -60,8 +60,8 @@
 - Uses divide and conquer approach
 - Mapper: converts data into key-value pairs
 - Daemons: Job tracker, task tracker
-- Job tracker: schedule jobs, provides resources, acts as OS.
-- Task tracker: executes tasks.
+- Job tracker: schedule jobs, provides resources, acts as OS. (Master daemon)
+- Task tracker: executes tasks. (Slave)
 - MapReduce tries data close to the processing unit. In other words task tracker is kept on data node.
 - To reduce delay, data is kept locally.
 - MapReduce steps:
@@ -105,13 +105,45 @@ Word count example
 ## About YARN
 
 - Yet another resource negotiater.
+- Limitations of MapReduce V1:
+  - Bottleneck caused by having a single JobTracker
+  - Fixed map and reduce slots
+  - Can run only MapReduce jobs.
+- Yarn solves this problem by brining in central resource management.
 - Yarn splits up the functionality of the JobTracker in Hadoop 1.x into two separate processes:
-  1. Resource manager: for allocating resources and scheduling applications.
+  1. Resource manager (daemon) : for allocating resources and scheduling applications.
   2. Application master: for executing applications and providing failover
 - Resource manager commmunicates with node managers, applicaion masters and client applications.
-- Node manager:
-  - Manages local CPU and RAM resources on behalf of requesting services.
+- Node manager (generalised task tracker):
+  - Provides resources in the form of containers.
+  - Containers executes application specific process.
+  - Manages local CPU and RAM resources in the containers on behalf of requesting services.
   - Tracks node health and communicates status to the Resource manager.
+- Architecture:
+- Components:
+  1. Client: To submit MapReduce jobs.
+  2. Resource manager: To manage the use of resources across the cluster.
+  3. Container: Name given to a package of resources including RAM, CPU, network, HDD etc.
+  4. Node manager: To oversee the containers running on the cluster nodes.
+  5. Application master: negotiates with the resource manager for resources and runs the application-specific process (Map or Reduce tasks) in those clusters.
+- Resource manager:
+  - Two components: scheduler and application manager.
+  - It is a global resource scheduler.
+  - Manages and allocates cluster resources.
+- Application master:
+  - Manages application life cycle and task scheduling.
+  - Application is a job submitted to the framework. (Ex: MapReduce job).
+- Node manager:
+  - Manages single node resources allocations per-node agent
+- Container:
+  - Basic unit of allocation.
+- Example: Running a word count application:
+  - In HDFS, we have the data. The data is stored across two nodes data node 1 and data node 2.
+  - Client contacts the resource manager and asks it to run a application master process.
+  - Resource manager contacts a node manager and node manager allocates a container for it.
+  - Node manager requests for the resources from resource manager and job is launched over the two data nodes.
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/760c4be9-34b4-4c36-b7df-5785497df34c)
 
 ## Hadoop Ecosystem
 
