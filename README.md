@@ -53,6 +53,8 @@
 
 ![image](https://github.com/Adityasr30/BigData/assets/86728825/b80de135-85d2-457c-bdea-07a645c2f5ef)
 
+![image](https://github.com/Adityasr30/BigData/assets/86728825/0c8838c6-3229-4c72-9cf7-bc459d6335ca)
+
 ## What is MapReduce?
 
 - Processing unit
@@ -102,3 +104,7 @@
 - Node manager:
   - Manages local CPU and RAM resources on behalf of requesting services.
   - Tracks node health and communicates status to the Resource manager.
+
+## Hadoop Ecosystem
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/51398f9c-b43c-485e-b915-aa579b7662d9)
