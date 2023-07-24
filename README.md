@@ -161,31 +161,31 @@ Word count example
 
 ![image](https://github.com/Adityasr30/BigData/assets/86728825/51398f9c-b43c-485e-b915-aa579b7662d9)
 
-- **Apache Spark**:
+**Apache Spark**:
 Apache Spark is a fast and general-purpose data processing engine. It supports in-memory data processing and provides high-level APIs for batch processing, stream processing, machine learning, and graph processing.
 
-- **Apache Hive**:
+**Apache Hive**:
 Apache Hive is a data warehousing and SQL-like query language system built on top of Hadoop. It allows you to query and analyze large datasets using HiveQL, a SQL-like language.
 
-- **Apache HBase**:
+**Apache HBase**:
 Apache HBase is a distributed, scalable NoSQL database that runs on top of HDFS. It is designed for random read/write access to large datasets.
 
-- **Apache Pig**:
+**Apache Pig**:
 Apache Pig is a high-level platform for creating MapReduce programs using a scripting language called Pig Latin. It simplifies the development of complex data processing tasks.
 
-- **Apache ZooKeeper**:
+**Apache ZooKeeper**:
 Apache ZooKeeper is a centralized service for maintaining configuration information, naming, synchronization, and group services in distributed systems. It is often used for coordination tasks within Hadoop clusters.
 
-- **Apache Oozie**:
+**Apache Oozie**:
 Apache Oozie is a workflow scheduler system to manage Hadoop jobs. It allows you to define, schedule, and execute workflows of dependent Hadoop jobs.
 
-- **Apache Flume**:
+**Apache Flume**:
 Apache Flume is a distributed, reliable, and available system for efficiently collecting, aggregating, and moving large amounts of log data from different sources to HDFS.
 
-- **Apache Kafka**:
+**Apache Kafka**:
 While not part of the Hadoop project, Kafka is often considered as part of the Hadoop ecosystem. It is a distributed streaming platform that can be used for real-time data ingestion and processing.
 
-- **Apache Sqoop**:
+**Apache Sqoop**:
 Apache Sqoop is a tool for efficiently transferring data between Hadoop and relational databases. It enables data import and export between Hadoop and various databases.
 
 ## Kafka
@@ -201,7 +201,7 @@ A topic in Kafka is a specific category or feed name to which messages are publi
 - **Partition**:
 A topic can be divided into multiple partitions, and each partition is a linearly ordered, immutable sequence of messages. Partitions allow you to distribute data across multiple brokers and enable parallel processing and read/write operations for better performance.
 
-**Producer**:
+- **Producer**:
 A producer is a client application that publishes data to Kafka topics. It writes messages to one or more Kafka topics, and the messages are then stored in the respective topic partitions within the Kafka brokers.
 
 - **Consumer**:
