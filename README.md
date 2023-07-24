@@ -71,6 +71,8 @@
   4. Shuffling
   5. Reducing
 
+![image](https://github.com/Adityasr30/BigData/assets/86728825/23fbd29e-27bb-49d7-a32c-d222775250de)
+
 ## Hadoop Deployement Modes
 
 - Standalone mode
