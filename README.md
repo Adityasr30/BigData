@@ -50,6 +50,7 @@
 - Heartbeat: datanode sends heartbeat signal every 3 seconds to name node, indicating that it is alive.
 - When client tries to access data, the request goes to the namenode. The namenode identifies where the data is, on the data node through metadata information. Then returns the address where data is stored to the client.
 - Reads are easy/ fast. Writes are difficult. Because to write on one data node, we also need to replicate it to other data nodes as well.
+![image](https://github.com/Adityasr30/BigData/assets/86728825/683b7562-3d01-4624-89a4-22938700995f)
 
 ## What is MapReduce?
 
