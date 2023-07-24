@@ -53,8 +53,6 @@
 
 ![image](https://github.com/Adityasr30/BigData/assets/86728825/b80de135-85d2-457c-bdea-07a645c2f5ef)
 
-![image](https://github.com/Adityasr30/BigData/assets/86728825/0c8838c6-3229-4c72-9cf7-bc459d6335ca)
-
 ## What is MapReduce?
 
 - Processing unit
@@ -74,6 +72,10 @@
   5. Reducing
 
 ![image](https://github.com/Adityasr30/BigData/assets/86728825/23fbd29e-27bb-49d7-a32c-d222775250de)
+
+Word count example
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/0c8838c6-3229-4c72-9cf7-bc459d6335ca)
 
 ## Hadoop Deployement Modes
 
