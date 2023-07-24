@@ -120,6 +120,9 @@ Word count example
   - Manages local CPU and RAM resources in the containers on behalf of requesting services.
   - Tracks node health and communicates status to the Resource manager.
 - Architecture:
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/cb0e9e1b-0f9c-4dd4-a16b-bffe851857f5)
+
 - Components:
   1. Client: To submit MapReduce jobs.
   2. Resource manager: To manage the use of resources across the cluster.
@@ -130,11 +133,20 @@ Word count example
   - Two components: scheduler and application manager.
   - It is a global resource scheduler.
   - Manages and allocates cluster resources.
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/04a3dca2-c54b-4fc6-b306-c1742af8a69d)
+
 - Application master:
   - Manages application life cycle and task scheduling.
   - Application is a job submitted to the framework. (Ex: MapReduce job).
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/a56dc70d-7e1d-404a-83fd-5e86dfbb4a74)
+
 - Node manager:
-  - Manages single node resources allocations per-node agent
+  - Manages single node resources allocations per-node agent'
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/34260591-48a3-4fc7-b23f-a3eea2db83a0)
+
 - Container:
   - Basic unit of allocation.
 - Example: Running a word count application:
