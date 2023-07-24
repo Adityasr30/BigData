@@ -84,17 +84,23 @@ Word count example
   - Suitable for test and development
   - No replication of data
 
+![image](https://github.com/Adityasr30/BigData/assets/86728825/ef9fbbfd-fdc7-4fc3-9da2-9c7240e1fe10)
+
 - Pseudo-distributed mode
   - Simulates distributed environment on a single machine.
   - Each hadoop service daemon runs in its own JVM.
   - Appropriate for quality assurance, test and development.
   - Default replication factor = 1
 
+![image](https://github.com/Adityasr30/BigData/assets/86728825/79446404-df0f-44c1-ad71-7e297b07a6be)
+
 - Distributed mode
   - Multiple machines
   - Each hadoop service daemon runs in its own JVM.
   - Best and typical for production environments.
   - Default replication factor = 3
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/b18190b5-239d-4fe9-aaba-ac6b38d6c98d)
 
 ## About YARN
 
