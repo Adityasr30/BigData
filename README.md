@@ -7,7 +7,7 @@
 - Small data increases gradually (moderate or small)
 - Big data increases exponentially (on daily basis, huge amount of data is being generated)
 - Small data is stored centrally.
-- Big data is stored distributed.
+- Big data is distributed.
 - Structured data is stored using SQL server, Oracle.
 - Big data is stored using Hadoop, Spark.
 
