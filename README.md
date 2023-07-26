@@ -32,7 +32,7 @@
 ## What is HDFS?
 
 - Ensures efficient storage.
-- Hiearchical architure
+- Hierarchical architecture
 - Based on local file system
 - Designed for huge amount of data
 - Can be deployed on the existing file system/ devices. Thus making it cost effective.
