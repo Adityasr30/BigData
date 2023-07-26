@@ -215,6 +215,8 @@ Kafka relies on Apache ZooKeeper to manage its distributed nature. ZooKeeper hel
 
 These components work together to create a highly scalable and fault-tolerant streaming platform, enabling real-time data processing and analytics for various applications and use cases.
 
+![image](https://github.com/Adityasr30/BigData/assets/86728825/b659c18d-837b-4559-b51a-d1c901ec39dd)
+
 ## Hive
 
 Hive is an open-source data warehousing and SQL-like query language system built on top of Hadoop. It was developed by Facebook and later contributed to the Apache Software Foundation. Hive allows you to query and analyze large datasets stored in Hadoop's HDFS (Hadoop Distributed File System) using a familiar SQL-like language called HiveQL. Here are some key aspects and components of Hive:
@@ -241,6 +243,20 @@ Hive allows you to define custom functions known as User-Defined Functions (UDFs
 Hive integrates seamlessly with other components of the Hadoop ecosystem, such as HDFS for storage, HBase for NoSQL capabilities, and Spark for data processing. This integration allows you to leverage the strengths of various tools to handle different aspects of big data processing.
 
 Hive's SQL-like interface and integration with Hadoop make it a popular choice for data warehousing, data processing, and business intelligence applications, especially in the big data domain. It enables users to leverage their SQL skills to work with large-scale datasets stored in Hadoop clusters.
+
+## Hive Architecture
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/1bf24939-134e-4918-8735-08ed02ffcc1b)
+
+- **JDBC Driver** - It is used to establish a connection between hive and Java applications. The JDBC Driver is present in the class org.apache.hadoop.hive.jdbc.HiveDriver.
+- **ODBC Driver** - It allows the applications that support the ODBC protocol to connect to Hive.
+- **Hive CLI** - The Hive CLI (Command Line Interface) is a shell where we can execute Hive queries and commands.
+- **Hive Web User Interface** - The Hive Web UI is just an alternative of Hive CLI. It provides a web-based GUI for executing Hive queries and commands.
+- **Hive MetaStore** - It is a central repository that stores all the structure information of various tables and partitions in the warehouse. It also includes metadata of column - and its type information, the serializers and deserializers which is used to read and write data and the corresponding HDFS files where the data is stored.
+- **Hive Server** - It is referred to as Apache Thrift Server. It accepts the request from different clients and provides it to Hive Driver.
+- **Hive Driver** - It receives queries from different sources like web UI, CLI, Thrift, and JDBC/ODBC driver. It transfers the queries to the compiler.
+- **Hive Compiler** - The purpose of the compiler is to parse the query and perform semantic analysis on the different query blocks and expressions. It converts HiveQL statements into MapReduce jobs.
+- **Hive Execution Engine** - Optimizer generates the logical plan in the form of DAG of map-reduce tasks and HDFS tasks. In the end, the execution engine executes the incoming tasks in the order of their dependencies.
 
 ## Difference between external and managed tables
 
