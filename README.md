@@ -36,12 +36,12 @@
 - Based on local file system
 - Designed for huge amount of data
 - Can be deployed on the existing file system/ devices. Thus making it cost effective.
-- Namenode (master node) and datanode.
+- Components: Namenode (master node) and datanode.
 - Divides a file into parts.
 - Metadata is stored in namespace in name node.
 - Data is replicated to multiple nodes (fault tolerance).
 - Data nodes are stored in racks.
-- If a data is stored inside a datanode. Then this data node is stored in a rack. The data will also be replicated on another data node. This data node will note be stored in the same rack because, if the rack itself gets corrupted or down, then the data might be lost. This concept is called as Rack awareness.
+- If a data is stored inside a datanode. Then this data node is stored in a rack. The data will also be replicated on another data node. This data node will not be stored in the same rack because, if the rack itself gets corrupted or down, then the data might be lost. This concept is called as Rack awareness.
 - While fetching data, hdfs tries to fetch it from the nearest rack. Original data is kept locally.
 - Components of name node: FsImage, EditLogs.
 - FsImage: Image/ Snapshot of Hdfs.
