@@ -46,9 +46,9 @@
 - Components of name node: FsImage, EditLogs.
 - FsImage: Image/ Snapshot of Hdfs.
 - EditLogs: log file of every action.
-- Secondary name node: Updates FsImage. It merges FsImage and EditLogs file.
+- Secondary name node: Updates FsImage. It merges FsImage and EditLogs file. This is called checkpointing.
 - Heartbeat: datanode sends heartbeat signal every 3 seconds to name node, indicating that it is alive.
-- When client tries to access data, the request goes to the namenode. The namenode identifies where the data is, on the data node through metadata information. Then returns the address where data is stored to the client.
+- When client tries to access data, the request goes to the namenode. The namenode identifies where the data is on the data node through metadata information. Then returns the address where data is stored, to the client.
 - Reads are easy/ fast. Writes are difficult. Because to write on one data node, we also need to replicate it to other data nodes as well.
 
 ![image](https://github.com/Adityasr30/BigData/assets/86728825/b80de135-85d2-457c-bdea-07a645c2f5ef)
