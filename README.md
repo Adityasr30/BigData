@@ -306,3 +306,7 @@ Importing data from a relational database into Hadoop for large-scale data proce
 Exporting the results of data processing in Hadoop back to a relational database for reporting or serving purposes.
 Loading data into Hive or HBase for further analysis or querying.
 Sqoop is a valuable tool in the Hadoop ecosystem, providing seamless integration between relational databases and Hadoop, allowing organizations to leverage the strengths of both worlds and efficiently manage their data pipelines.
+
+## Core Hadoop Configuration files
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/1270caba-008b-4678-bc2b-24bbf695d781)
