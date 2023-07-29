@@ -109,7 +109,7 @@ Word count example
   - Bottleneck caused by having a single JobTracker
   - Fixed map and reduce slots
   - Can run only MapReduce jobs.
-- Yarn solves this problem by brining in central resource management.
+- Yarn solves this problem by bringing in central resource management.
 - Yarn splits up the functionality of the JobTracker in Hadoop 1.x into two separate processes:
   1. Resource manager (daemon) : for allocating resources and scheduling applications.
   2. Application master: for executing applications and providing failover
