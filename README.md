@@ -62,7 +62,7 @@
 - Daemons: Job tracker, task tracker
 - Job tracker: schedule jobs, provides resources, acts as OS. (Master daemon)
 - Task tracker: executes tasks. (Slave)
-- MapReduce tries data close to the processing unit. In other words task tracker is kept on data node.
+- MapReduce tries to keep data close to the processing unit. In other words task tracker is kept on data node.
 - To reduce delay, data is kept locally.
 - MapReduce steps:
   1. Input
