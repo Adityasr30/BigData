@@ -193,10 +193,10 @@ Apache Sqoop is a tool for efficiently transferring data between Hadoop and rela
 Kafka is an open-source distributed streaming platform developed by Apache Software Foundation. It is widely used for building real-time data pipelines and streaming applications. Kafka is designed to handle high-throughput, fault-tolerant, and scalable data streams.
 
 **How company starts?**
-A company have a source system and a target system. Problem arises when the number of source system and target systems increase. If there are 4 source systems and 6 target systems and each source system interacts with target system, then there has to be 24 integrations!. This is certainly difficult to do so. Kafka is used to decouple the data between source system and target system.
+- A company have a source system and a target system. Problem arises when the number of source system and target systems increase. If there are 4 source systems and 6 target systems and each source system interacts with target system, then there has to be 24 integrations!. This is certainly difficult to do so. Kafka is used to decouple the data between source system and target system.
 
 **What does decoupling mean?**
-It means reducing the dependancy between source system and target system. The dependancies can be TCP/IP networks, file formats (json, csv, etc.) and schema evaluation. The data from source system comes into kafka and target systems fetch the data from kafka. Kafka is used by 2000+ organisations. 
+- It means reducing the dependancy between source system and target system. The dependancies can be TCP/IP networks, file formats (json, csv, etc.) and schema evaluation. The data from source system comes into kafka and target systems fetch the data from kafka. Kafka is used by 2000+ organisations. 
 
 **Topic**
 - Topic is like a table in database.
