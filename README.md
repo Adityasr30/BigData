@@ -234,7 +234,7 @@ Kafka is an open-source distributed streaming platform developed by Apache Softw
 - It does not send all the messages to a single partition.
 - It send message one by one in each partition. That's how it achieves load balancing.
 
-![image](https://github.com/Adityasr30/BigData/assets/86728825/9668ad69-06af-4197-9d5f-5408b827b6a8)
+![image](https://github.com/Adityasr30/BigData/assets/86728825/b9926d45-9757-488b-a5cf-320c43c18510)
 
 **Consumers**
 - Reads data from the topic.
