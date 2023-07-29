@@ -190,28 +190,62 @@ Apache Sqoop is a tool for efficiently transferring data between Hadoop and rela
 
 ## Kafka
 
-Kafka is an open-source distributed streaming platform developed by Apache Software Foundation. It is widely used for building real-time data pipelines and streaming applications. Kafka is designed to handle high-throughput, fault-tolerant, and scalable data streams. The main components of Kafka include:
+Kafka is an open-source distributed streaming platform developed by Apache Software Foundation. It is widely used for building real-time data pipelines and streaming applications. Kafka is designed to handle high-throughput, fault-tolerant, and scalable data streams.
 
-- **Broker**:
-A Kafka broker is a server that stores and manages the published data streams. It is responsible for receiving messages from producers, storing them on disk in a distributed manner, and serving them to consumers upon request. Brokers can be part of a Kafka cluster, and they work together to ensure fault tolerance and scalability.
+**How company starts?**
+A company have a source system and a target system. Problem arises when the number of source system and target systems increase. If there are 4 source systems and 6 target systems and each source system interacts with target system, then there has to be 24 integrations!. This is certainly difficult to do so. Kafka is used to decouple the data between source system and target system.
 
-- **Topic**:
-A topic in Kafka is a specific category or feed name to which messages are published by producers. Each message published to a topic is distributed to multiple partitions. Topics can be partitioned to enable parallel processing and horizontal scalability of data consumption.
+**What does decoupling mean?**
+It means reducing the dependancy between source system and target system. The dependancies can be TCP/IP networks, file formats (json, csv, etc.) and schema evaluation. The data from source system comes into kafka and target systems fetch the data from kafka. Kafka is used by 2000+ organisations. 
 
-- **Partition**:
-A topic can be divided into multiple partitions, and each partition is a linearly ordered, immutable sequence of messages. Partitions allow you to distribute data across multiple brokers and enable parallel processing and read/write operations for better performance.
+**Topic**
+- Topic is like a table in database.
+- There can be multiple topics.
+- Topics are identified by giving them a name.
 
-- **Producer**:
-A producer is a client application that publishes data to Kafka topics. It writes messages to one or more Kafka topics, and the messages are then stored in the respective topic partitions within the Kafka brokers.
+**Partition**
+- There are parititions in a topic.
+- There can be multiple partitions in a topic.
+- Messages are stored in the partition in the form of offset.
+- Order is guaranteed only within a partition.
+- Data is kept only for a limited time (default is one week).
+- Once the data is written, it can't be changed (immutability).
 
-- **Consumer**:
-A consumer is a client application that reads data from Kafka topics. It subscribes to one or more topics and consumes messages from the partitions of those topics. Each consumer keeps track of the offset (a unique identifier) of the last message read from each partition, allowing it to resume from the last read position if needed.
+![image](https://github.com/Adityasr30/BigData/assets/86728825/77d8f225-c07e-46e0-be27-0ead59b8b4e0)
+
+**Broker**
+- A kafka cluster is composed of multiple brokers.
+- Each broker is identified with its ID.
+- Each broker contains topics partitions.
+- After connecting to a single broker, we will be connected to the entire cluster.
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/11866bb5-9520-494c-85f0-f209a4f21392)
+
+**Topic replication factor**
+- Ensures fault tolerance
+- Replication factor should be greater than 1.
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/04db43d5-a6ed-4eee-9334-a4d09da23e10)
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/a3612c95-fec4-434a-99d3-43fcaa0581e6)
+ 
+**Producer**
+- Writes data to the topic.
+- It does not send all the messages to a single partition.
+- It send message one by one in each partition. That's how it achieves load balancing.
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/9668ad69-06af-4197-9d5f-5408b827b6a8)
+
+**Consumers**
+- Reads data from the topic.
+
+![image](https://github.com/Adityasr30/BigData/assets/86728825/02ed34a5-1233-46a9-9485-3c073b5ec84e)
 
 - **Consumer Group**:
 Consumers are organized into consumer groups. A consumer group is a set of consumers that collectively consume messages from one or more topics. Each message published to a topic is delivered to only one consumer within each consumer group. This allows for load balancing and parallel consumption of data.
 
-- **Zookeeper**:
-Kafka relies on Apache ZooKeeper to manage its distributed nature. ZooKeeper helps with various tasks, including broker discovery, leader election for partitions, and keeping track of Kafka cluster metadata. However, with newer versions of Kafka, there is a move away from the dependency on ZooKeeper towards a self-managing protocol.
+![image](https://github.com/Adityasr30/BigData/assets/86728825/4c8407a1-be6b-4c8d-9fde-a5bc113b5dac)
+
 
 These components work together to create a highly scalable and fault-tolerant streaming platform, enabling real-time data processing and analytics for various applications and use cases.
 
