@@ -251,6 +251,22 @@ These components work together to create a highly scalable and fault-tolerant st
 
 ![image](https://github.com/Adityasr30/BigData/assets/86728825/b659c18d-837b-4559-b51a-d1c901ec39dd)
 
+## Why I can't put messages directly into topic without partitions in kafka?
+
+There are a few reasons why you can't put messages directly into a topic without partitions:
+- Data Distribution and Scalability
+- Parallel Processing
+- Ordering Guarantees
+- Retention and Cleanup
+- Replication
+
+## Why there is a need of conusmer groups in kafka?
+
+Consumer groups in Kafka are an essential feature that allows multiple consumers to work together to process data from Kafka topics effectively. They serve several purposes and provide important benefits:
+- Parallel Processing
+- Load Distribution
+- Fault Tolerance
+
 ## Hive
 
 Hive is an open-source data warehousing and SQL-like query language system built on top of Hadoop. It was developed by Facebook and later contributed to the Apache Software Foundation. Hive allows you to query and analyze large datasets stored in Hadoop's HDFS (Hadoop Distributed File System) using a familiar SQL-like language called HiveQL. Here are some key aspects and components of Hive:
@@ -299,26 +315,31 @@ In Hive, there are two types of tables: External tables and Managed tables. Each
 - **Location and Data Management**:
 
 Managed Tables: When you create a managed table in Hive, Hive itself manages the lifecycle and storage of the data associated with the table. The data is stored in the Hive data warehouse directory (usually in HDFS). If you drop a managed table, Hive will also remove the table data from the warehouse directory.
+
 External Tables: With external tables, the data is not managed by Hive. The table definition in Hive points to an existing data location outside of the Hive warehouse directory (e.g., in HDFS or an external storage system). If you drop an external table, it does not affect the underlying data since Hive only drops the table metadata, not the actual data files.
 
 - **Data Durability**:
 
 Managed Tables: Since Hive manages the data for managed tables, if a managed table is dropped, the data is also deleted. This could lead to data loss if you accidentally drop a table.
+
 External Tables: With external tables, the data exists independently of the table definition in Hive. The data remains intact even if the external table is dropped, providing more data durability and safety.
 
 - **Data Sharing**:
 
 Managed Tables: Managed tables are ideal for data that is specific to Hive and not shared with other systems. The data is tightly coupled with Hive's lifecycle.
+
 External Tables: External tables are suitable when you want to share data with other systems or when the data is generated and managed by an external process outside of Hive. Since the data exists independently, other systems can access the same data without needing to go through Hive.
 
 - **Backup and Recovery**:
 
 Managed Tables: Since Hive manages the data of managed tables, backup and recovery processes typically involve backing up the entire Hive warehouse directory.
+
 External Tables: In the case of external tables, you only need to backup the external data location, which is separate from the Hive warehouse, making backup and recovery more straightforward.
 
 - **Data Ingestion**:
 
 Managed Tables: When you load data into a managed table, Hive typically moves the data from the source location into the Hive warehouse directory.
+
 External Tables: For external tables, the data is already present at the external location, and Hive only creates metadata to represent the table over that data without moving it.
 
 In summary, managed tables are suitable when you want Hive to manage the data lifecycle, and you don't need to share the data with external systems. On the other hand, external tables are useful when the data is shared among multiple systems, or you have existing data that you want to make accessible through Hive without moving it. The choice between managed and external tables depends on the specific use case and data management requirements of your Hive-based application.
