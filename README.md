@@ -323,6 +323,10 @@ External Tables: For external tables, the data is already present at the externa
 
 In summary, managed tables are suitable when you want Hive to manage the data lifecycle, and you don't need to share the data with external systems. On the other hand, external tables are useful when the data is shared among multiple systems, or you have existing data that you want to make accessible through Hive without moving it. The choice between managed and external tables depends on the specific use case and data management requirements of your Hive-based application.
 
+## What is Beeline?
+
+Beeline is a command-line interface for Hive that provides remote access and JDBC support, making it a more convenient option for some use cases. Both tools are essential components of the Hadoop ecosystem for data processing and analysis.
+
 ## Sqoop
 
 Sqoop (SQL-to-Hadoop) is an open-source command-line tool and a subproject of Apache Hadoop designed to efficiently transfer data between relational databases and Hadoop (HDFS and Hive). It enables users to import data from databases such as MySQL, Oracle, PostgreSQL, SQL Server, and others into Hadoop, and also export data from Hadoop back to relational databases.
